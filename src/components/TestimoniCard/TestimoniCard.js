@@ -1,5 +1,8 @@
 import React from 'react';
 import './TestimoniCard.scss';
+import { AiFillStar } from "react-icons/ai";
+
+
 
 const TestimoniCard = ({testimonail}) => {
 
@@ -17,7 +20,9 @@ const TestimoniCard = ({testimonail}) => {
                 </div>
                 <ul className='testimonial-rating'>
                     {
-                        ratings?.map (rating => <li>{rating}</li>)
+                        ratings?.map((_, index) => (
+                            <li key={index}><AiFillStar color="orange" /></li>
+                        ))
                     }
                 </ul>
             </div>

@@ -5,9 +5,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SectionTitle from "../SectionTitle/SectionTitle";
-import priorityImg1 from "../../assets/about/clinic/1.JPG";
-import priorityImg2 from "../../assets/about/clinic/2.JPG";
-import priorityImg3 from "../../assets/about/clinic/3.JPG";
+import priorityImg1 from "../../assets/about/clinic/4.jpg";
+import priorityImg2 from "../../assets/about/clinic/5.jpg";
+import priorityImg3 from "../../assets/about/clinic/6.jpg";
+import priorityImg4 from "../../assets/about/clinic/8.jpg";
+import priorityImg5 from "../../assets/about/clinic/9.jpg";
+import priorityImg6 from "../../assets/about/clinic/10.jpg";
+import priorityImg7 from "../../assets/about/clinic/11.jpg";
+
+
 import "./Clinic.scss";
 
 const Priority = () => {
@@ -31,7 +37,7 @@ const Priority = () => {
         <section id="clinic" className="priority-section pt-100">
             <div className="container">
                 <div className="row align-items-center flex-column-reverse flex-lg-row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-7">
                         <div className="priority-text">
                             <h2 className="section-title">
                                 Welcome to <br />
@@ -62,7 +68,7 @@ const Priority = () => {
                             )}
                     </div>
 
-                    <div className="col-lg-6 text-center">
+                    <div className="col-lg-5 text-center">
                         <div className="priority-slider">
                             <Swiper
                                 modules={[Navigation, Pagination, Autoplay]}
@@ -82,6 +88,20 @@ const Priority = () => {
                                 <SwiperSlide>
                                     <img src={priorityImg3} alt="Clinic" className="img-fluid rounded" />
                                 </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={priorityImg4} alt="Clinic" className="img-fluid rounded" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={priorityImg5} alt="Clinic" className="img-fluid rounded" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={priorityImg6} alt="Clinic" className="img-fluid rounded" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src={priorityImg7} alt="Clinic" className="img-fluid rounded" />
+                                </SwiperSlide>
+                           
+                                
                             </Swiper>
                         </div>
                     </div>
