@@ -1,0 +1,415 @@
+@import '../../sass/colors.scss';
+
+.banner-section {
+    height: 680px;
+    margin-top: 90px;
+    position: relative;
+    z-index: 1;
+    background-image: url(../../assets/about/clinic/3.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.645);  // Adjust opacity here
+        z-index: -1;  // Behind content
+    }
+
+    .banner-pattern {
+        position: absolute;
+        top: 10%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.banner-text {
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    h1 {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+        color: white;
+    }
+    p{
+        font-size: 25px;
+    }
+    .banner-bottom {
+        margin-top: 60px;
+        align-items: center;
+
+        .theme-btn {
+            align-items: center;
+
+            a {
+                font-size: 16px;
+                padding: 20px 25px;
+                text-align: center;
+            }
+        }
+
+        .banner-call {
+
+            
+            .call-text1 {
+                
+
+                p {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+                h6 {
+                    text-align: center;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    margin-top: -10px;
+                    a {
+                        color: rgb(255, 255, 255);
+                        text-decoration: none;
+                
+                        &:hover {
+                            color: #9c5147eb;
+                            text-decoration:underline;
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner-img-area {
+    position: relative;
+    text-align: center;
+    align-items: center;
+
+    .banner-img {
+        margin-bottom: -50px;
+    }
+
+    .info-box {
+        position: relative;
+        bottom: 5%;
+        left: 0%;
+        background: $color-white;
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        .info-img {
+            margin-left: 80px;
+            width: 20%;
+            height: 20%;
+            
+        }
+
+        .info-text {
+            text-align: left;
+            
+            #banner p {
+                margin-bottom: 0;
+                color: $color-black;
+                font-size: 16px;
+                font-weight: 600;
+                margin-left: 20px;
+
+                small {
+                    color: $color-gray;
+                }
+            }
+        }
+    }
+
+    .shapes {
+        img {
+            position: absolute;
+
+            &:nth-child(1) {
+                left: 0;
+                top: 0;
+            }
+            &:nth-child(2) {
+                right: 0;
+                top: 0;
+            }
+            &:nth-child(3) {
+                right: 0;
+                top: 40%;
+            }
+            &:nth-child(4) {
+                left: 10%;
+                top: 30%;
+                z-index: -1;
+            }
+        }
+
+    }
+
+}
+
+
+// Mobile Responsive
+@media (max-width: 390px) {
+    // #banner p {
+    //     display: none;
+    // }
+
+    // Banner CSS
+    .banner-section {
+        height: 560px; // Increased height for mobile screens
+        margin-top: 90px;
+    }
+    .banner-img-area {
+        .banner-img {
+            margin-bottom: 0;
+        }
+
+        .shapes {
+            img {
+                &:nth-child(1) {
+                    max-width: 70px;
+                }
+            }
+        }
+    }
+    .banner-text {
+        text-align: center;
+        padding-top: 30px;
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 12px !important;
+        }
+
+        .banner-bottom {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            display: block;
+
+            .theme-btn {
+                margin-right: 0px;
+                margin-bottom: 20px;
+
+                a {
+                    padding: 15px 20px;
+                }
+            }
+
+            .banner-call {
+                justify-content: center;
+
+                .call-text {
+                    text-align: left;
+                    #banner p {
+                        font-size: 12px;
+                    }
+
+                    h6 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 400px)and (max-width: 430px) {
+    // Banner CSS
+    .banner-section {
+        height: 730px; // Increased height for mobile screens
+        margin-top: 90px;
+    }
+    .banner-img-area {
+        .banner-img {
+            margin-bottom: 0;
+        }
+
+        .shapes {
+            img {
+                &:nth-child(1) {
+                    max-width: 70px;
+                }
+            }
+        }
+    }
+    .banner-text {
+        text-align: center;
+        padding-top: 30px;
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 18px !important;
+        }
+
+        .banner-bottom {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            display: block;
+
+            .theme-btn {
+                margin-right: 0px;
+                margin-bottom: 20px;
+
+                a {
+                    padding: 15px 20px;
+                }
+            }
+
+            .banner-call {
+                justify-content: center;
+
+                .call-text {
+                    text-align: left;
+                    #banner p {
+                        font-size: 12px;
+                    }
+
+                    h6 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    // Banner CSS
+    .banner-section {
+        height: 550px; // Slightly increased height for small tablets
+        margin-top: 60px;
+    }
+    .banner-img-area {
+        .banner-img {
+            margin-bottom: 0;
+        }
+
+        .shapes {
+            img {
+                &:nth-child(1) {
+                    max-width: 70px;
+                }
+            }
+        }
+    }
+    .banner-text {
+        text-align: center;
+        padding-top: 30px;
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .banner-bottom {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            display: block;
+
+            .theme-btn {
+                margin-right: 0px;
+                margin-bottom: 20px;
+
+                a {
+                    padding: 15px 20px;
+                }
+            }
+
+            .banner-call {
+                justify-content: center;
+
+                .call-text {
+                    text-align: left;
+                    #banner p {
+                        font-size: 12px;
+                    }
+
+                    h6 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Medium Devices Responsive
+@media (min-width: 768px) and (max-width: 991px) {
+    // Banner CSS
+    .banner-section {
+        height: 100%;
+        margin-top: 130px;
+        padding-bottom: 20px;
+    }
+    .banner-img-area {
+        .banner-img {
+            margin-bottom: 0;
+        }
+
+        .shapes {
+            img {
+                &:nth-child(1) {
+                    max-width: 70px ;
+                }
+            }
+        }
+        
+    }
+    .banner-text {
+        text-align: center;
+        padding-top: 30px;
+        
+        h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .banner-bottom {
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner-text  {
+        h1 {
+            font-size: 45px;
+            margin-bottom: 25px;
+        } 
+
+        .banner-bottom {
+            margin-top: 40px;
+        }
+    }  
+}
+
+
+  
+  

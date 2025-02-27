@@ -1,0 +1,113 @@
+@import '../../sass/colors.scss';
+
+.team-section1 {
+  margin-bottom: 30px;
+  padding: 0 15px 70px;  // Added horizontal padding for consistent spacing
+  background-color: rgba(156, 81, 71, 0.2156862745);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.303);
+  padding-top: 40px;
+
+  .section-title {
+    h2 {
+      max-width: inherit;
+    }
+  }
+
+  .pt-5 {
+    color: black;
+  }
+
+  .team-card {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;  // Added padding for better spacing
+    box-sizing: border-box;
+
+    .team-img1 {
+      margin-bottom: 20px;
+      position: relative;
+      margin: 0 auto;  // Center the image
+      width: 80%;  // Adjusted width for responsiveness
+      border: 4px solid #511c17ea;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(245, 222, 179, 0.381);
+        content: '';
+        z-index: -1;
+        border-radius: 10px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+
+    h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+// Slider Navigation Arrows
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #511c17ea;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Small Device Responsive
+@media (max-width: 767px) {
+  .team-section1 {
+    padding-bottom: 50px;
+    
+    .team-card {
+      .team-img1 {
+        width: 90%;  // Slightly wider for medium screens
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .team-section1 {
+    padding-bottom: 50px;
+    text-align: center;
+
+    .team-card {
+      margin-bottom: 20px;
+      padding: 10px;
+
+      .team-img1 {
+        width: 100%;  // Full width for small screens
+        margin: 0 auto;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}

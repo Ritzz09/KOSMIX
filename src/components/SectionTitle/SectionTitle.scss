@@ -1,0 +1,85 @@
+@import '../../sass/colors.scss';
+
+.section-title {
+    margin-bottom: 0px;
+
+    span {
+        color: $color-blue;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: black;
+    }
+
+    p {
+        color: $color-black;
+        font-weight: 500;
+    }
+}
+
+// Mobile Responsive
+@media (max-width: 575px){
+    .section-title {
+        margin-bottom: 20px;
+        text-align: center;
+
+        span {
+            font-size: 1.8rem;   // Reduced font size for span
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 20px;    // Reduced font size for h2
+        }        
+        p {
+            text-align: center;
+            font-size: 14px;   // Reduced font size for paragraph
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .section-title {
+        margin-bottom: 20px;
+        text-align: center;
+
+        span {
+            font-size: 2rem;    // Slightly larger for small tablets
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 26px;   // Adjusted font size for h2
+        } 
+        p {
+            text-align: center;
+            font-size: 15px;   // Adjusted paragraph font size
+        }       
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-title {
+        margin-bottom: 30px;
+        
+        span {
+            font-size: 2.2rem; // Balanced size for tablets
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 28px;   // Adjusted size for medium screens
+        }  
+        p {
+            font-size: 16px;   // Adjusted paragraph size
+        }      
+    }
+}

@@ -1,0 +1,173 @@
+@import '../../sass/colors.scss';
+
+.dentist-section {
+    max-width: 95vw;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 50px 5vw;
+    background-color: rgba(156, 81, 71, 0.2156862745);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.303);
+    border-radius: 18px;
+
+    .container {
+        max-width: 1100px;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .dentist-title {
+        color: $color-blue; 
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    .highlight {
+        font-size: 35px;
+        font-weight: 600;
+        background: black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .pt-3 {
+        color: black;
+        font-size: 1.05rem; /* Reduced font size slightly */
+        line-height: 1.5; /* Reduced line height for closer text spacing */
+        text-align: justify;
+        max-width: 600px;
+        margin-top: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    
+        /* Adjusting space between paragraphs */
+        p, br + br {
+            margin-bottom: 10px; /* Reduced bottom margin */
+        }
+    
+        &.collapsed {
+            display: -webkit-box;
+            -webkit-line-clamp: 10;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    
+        &.expanded {
+            display: block;
+        }
+    }
+    
+
+    .read-more-btn {
+        background: $color-blue;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: darken($color-blue, 10%);
+        }
+    }
+
+    .dentist-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 25px;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+
+        li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+    }
+
+    .team-img {
+        width: 100%;
+        max-width: 350px; /* Reduced width for a more vertical look */
+        height: 550px; /* Increased height for vertical image */
+        border-radius: 15px;
+        overflow: hidden;
+        border: 4px solid #852e26ea;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.468);
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 0.4s ease-in-out;
+    
+        img {
+            width: 100%;
+            height: 110%;
+            object-fit:cover;
+            transition: transform 0.4s ease-in-out;
+    
+            &:hover {
+                transform: scale(1.08);
+            }
+        }
+    }
+    
+}
+
+/* Responsive Design */
+@media (max-width: 575px) {
+    .dentist-section {
+        padding: 30px;
+        text-align: center;
+
+        .row {
+            flex-direction: column;
+        }
+
+        .dentist-title {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .highlight {
+            font-size: 20px;
+        }
+
+        .pt-3 {
+            font-size: 16px;
+        }
+
+        .team-img {
+            width: 270px;
+            height: 270px;
+            margin: 15px auto;
+        }
+
+        .dentist-list {
+            font-size: 16px;
+            text-align: left;
+        }
+    }
+}
+
+/* Show full text and list by default on large screens */
+@media (min-width: 992px) {
+    .pt-3 {
+        display: block !important;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .dentist-list {
+        display: block;
+    }
+}

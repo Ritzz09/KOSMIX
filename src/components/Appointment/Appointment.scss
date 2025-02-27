@@ -1,0 +1,187 @@
+@import '../../sass/colors.scss';
+
+.appointment-section {
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+
+    .section-title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    h2 {
+        color: $color-blue;
+        text-align: center;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .google-map {
+        height: 400px;
+        position: relative;
+        margin-bottom: 30px;
+        border: 4px solid #511c17ea;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .location-name {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            background: $color-white;
+            padding: 15px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            border-radius: 30px;
+
+            svg {
+                background: $color-blue;
+                color: $color-white;
+                width: 60px;
+                height: 50px;
+                padding: 10px;
+                line-height: 50px;
+                border-radius: 15px;
+                border: 5px solid #DBDEFA;
+            }
+
+            p {
+                margin-left: 20px;
+                margin-bottom: 0;
+                font-weight: 600;
+                color: $color-black;
+            }
+        }
+    }
+
+    .appointment-form-area {
+        width: 100%;  // Make it responsive
+        max-width: 700px;  // Set a max width for larger screens
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #9c51471d;
+        margin: auto;
+    }
+}
+
+.appointment-call {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 30px;
+        background: $color-white;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 12px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 5px 3px rgb(0 0 0 / 8%);
+    }
+    
+    .call-text {
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $color-blue;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        h6 {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 575px) {
+    .appointment-section {
+    //     .section-title {
+    //         text-align: center;
+
+    //         h2 {
+    //             font-size: 2px;  // Adjust font size for better visibility
+    //             display: block;
+    //             width: 100%;
+    //         }
+    //     }
+        .google-map {
+            height: 300px; 
+            margin-bottom: -50px;
+            
+            .location-name {
+                padding: 10px;
+                width: 65%;
+
+                svg {
+                    width: 40px;
+                    height: 35px;
+                    padding: 5px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .appointment-form-area {
+            padding: 40px;
+            
+            #contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .col-lg-6,
+                .col-lg-12 {
+                    width: 100%;
+                    max-width: 400px;
+                    padding: 0;
+                    // margin-bottom: 15px;
+                }
+
+                .form-group {
+                    width: 100%;
+                    .form-control,
+                    select,
+                    textarea {
+                        width: 100%;
+                        border-radius: 10px;
+                        border: 1.5px dashed #511c17ea;
+                        padding: 10px;
+                        box-sizing: border-box;
+                    }
+                }
+
+                .appointment-btn {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .call-text{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+}

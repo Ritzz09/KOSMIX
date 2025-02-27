@@ -1,0 +1,103 @@
+@import '../../sass/colors.scss';
+
+.EquipmentSection {
+  padding: 50px 20px;
+  background-color: rgba(245, 222, 179, 0.074);
+
+  .content-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .text-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center; // Align text to the left for larger screens
+
+    h2 {
+      color: $color-blue;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: inline-block;
+
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+
+  .equipment-card {
+    background-color: rgba(156, 81, 71, 0.2156862745);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 10px;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .equipment-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+      border-radius: 15px;
+    }
+
+    .equipment-name {
+      padding: 15px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .EquipmentSection {
+    .content-wrapper {
+      align-items: center; // Center align for smaller screens
+      text-align: center;
+    }
+
+    .text-content {
+      max-width: 100%;
+      text-align: center;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    .equipment-card {
+      .equipment-name {
+        font-size: 1rem;
+      }
+    }
+  }
+}

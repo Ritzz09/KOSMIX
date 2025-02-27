@@ -1,0 +1,147 @@
+@import './../../sass/fonts.scss';
+@import './../../sass/colors.scss';
+
+.main-nav {
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: #f5d5b3f9;
+
+    .navbar {
+        padding: 0;
+        
+        .navbar-brand {
+            img {
+                max-width: 120px;
+                margin-right: 250px;
+            }
+        }
+        .navbar-nav {
+            
+            .nav-item {
+                
+                .nav-link {
+                    color: $color-black;
+                    font-size: 15px;
+                    font-weight: 600;
+                    padding: 0;
+                    margin: 10px 30px;
+                    
+
+                    &:hover {
+                        color: $color-blue;
+                        text-decoration: underline;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile Responsive
+@media (max-width: 575px) {
+    .main-nav {
+        padding: 0px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-brand {
+                img {
+                    
+                    margin-right: 0px;
+                }
+            }
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+        .navbar-brand {
+            img {
+                max-width: 60px;
+            }
+        }
+    }
+    .theme-btn{
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .main-nav {
+        padding: 10px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+        .navbar-brand {
+            img {
+                max-width: 90px;
+            }
+        }
+    }
+    .theme-btn{
+        margin-bottom: 20px;
+    }
+}
+
+// Medium Devices Responsive
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-nav {
+        padding: 15px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 0px;
+                    }
+                }
+            }
+        }
+    }
+    .theme-btn{
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main-nav {
+        padding: 20px 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        margin: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 430px) {
+    .theme-btn{
+        margin-bottom: 20px;
+    }
+  }
+  
+
+
+  

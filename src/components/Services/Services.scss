@@ -1,0 +1,260 @@
+@import '../../sass/colors.scss';
+
+.service-section {
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  .service-title-text {
+    padding-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 1000;
+    text-align: center;
+    color: black;
+  }
+
+  .services-link {
+    margin: 50px 0 30px;
+    text-align: center;
+
+    a {
+      color: $color-blue;
+      text-decoration: none;
+      font-weight: 700;
+      background: #bc453f1e;
+      padding: 15px 25px;
+      display: inline-block;
+      border-radius: 15px;
+
+      svg {
+        margin-left: 10px;
+        font-size: 20px;
+        top: -2px;
+        position: relative;
+      }
+    }
+  }
+  .section-title{
+    text-align: center;
+  }
+}
+
+
+// Responsive styles for all screen sizes
+@media (max-width: 767px) {
+  .service-section {
+    .service-title-text {
+      padding-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .service-slider-container {
+      margin-top: 30px;
+      overflow: hidden;
+    }
+
+    .service-card {
+      width: 90%;
+      padding: 5px;
+      margin: 5px auto;
+    }
+
+    .slider-item {
+      width: 100%;
+      padding: 0;
+      margin: 10px auto;
+    }
+
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-section {
+    .service-title-text {
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .service-slider-container {
+      margin-top: 50px;
+    }
+
+    .service-card {
+      width: 80%;
+      padding: 10px;
+      margin: 10px;
+      height: 95%;
+    }
+
+    .slider-item {
+      width: 33.33%;
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .service-section {
+    .service-title-text {
+      padding-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    .service-slider-container {
+      margin-top: 50px;
+    }
+
+    .service-card {
+      width: 335px;
+      padding: 2px;
+    }
+
+    .slider-item {
+      width: 33.33%;
+      padding: 0 15px;
+    }
+  }
+}
+
+
+.service-slider-container {
+  margin-top: 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; // Ensure the overflow is hidden for the sliding effect
+}
+
+.service-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding: 2px;
+  border-radius: 24px;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 34px;
+    border-radius: 22px;
+    color: #ffffff;
+    overflow: hidden;
+    background: #faecd3;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .content .heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.3;
+    z-index: 1;
+    color: #faf7f7;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .content .para {
+    z-index: 1;
+    opacity: 0.8;
+    font-size: 18px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    color: #ffffff;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 160%;
+    width: 160%;
+    border-radius: inherit;
+    background: #59281b;
+    background: linear-gradient(to right, #310300, #561b0faf);
+    transform-origin: center;
+    animation: moving 2.5s linear infinite;
+    transition: all 0.88s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: #590901;
+    scale: 1.05;
+    color: #000000;
+  }
+
+  &:hover::before {
+    animation-play-state: running;
+    z-index: -1;
+    width: 20%;
+  }
+
+  &:hover .content .heading,
+  &:hover .content .para {
+    color: #000000;
+  }
+
+  .content .heading {
+    color: #f1f0f0;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .content .para {
+    font-size: 16px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover .content .para {
+    opacity: 1;
+  }
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.prev-slide,
+.next-slide {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

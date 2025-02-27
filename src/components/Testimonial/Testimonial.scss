@@ -1,0 +1,58 @@
+.testimonail-section {
+  overflow: hidden; // Prevents overflow on small screens
+  padding: 0 15px;  // Ensures consistent padding on all screen sizes
+  height: 700px;
+
+  .testimoni-slider {
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+      padding: 10px;  // Add padding to prevent cards from touching edges
+      box-sizing: border-box;
+    }
+
+    .slick-list {
+      overflow: hidden;
+      margin: 0 -10px; // Matches the padding to maintain spacing
+    }
+  }
+
+  // Section Height Adjustmentsx
+  .section-common {
+    height: auto;
+    min-height: 650px;
+    overflow: hidden;
+  }
+
+  .col-lg-6{
+    margin-top: 40px;
+  }
+
+  // Adjustments for Mobile Screens
+  @media (max-width: 767px) {
+    .section-common {
+      padding-bottom: 50px;
+      min-height: auto;  // Allow flexible height for small screens
+    }
+
+    .testimoni-slider {
+      .slick-slide {
+        max-width: 90%;   // Reduce width for better fit
+        margin: 0 auto;   // Center the slides
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .section-common {
+      padding-bottom: 70px;
+    }
+
+    .testimoni-slider {
+      .slick-slide {
+        width: 100%;
+        padding: 0 5px; // Reduce padding for smaller screens
+      }
+    }
+  }
+}

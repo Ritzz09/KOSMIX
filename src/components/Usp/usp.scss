@@ -1,0 +1,108 @@
+@import '../../sass/colors.scss';
+
+/* USP Section */
+.usp-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* USP Box */
+.usp-box {
+  background: linear-gradient(to right, #3a0300, #954c3e);
+  border-radius: 0 50px 0 50px;
+  text-align: center;
+  padding: 20px;
+  width: 20%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 25px;
+}
+
+.usp-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* USP Icon */
+.usp-icon {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.usp-box:hover .usp-icon {
+  transform: rotate(360deg);
+}
+
+/* USP Number */
+.usp-number {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  // margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.usp-box:hover .usp-number {
+  font-size: 35px;
+}
+
+/* USP Text */
+.usp-text {
+  font-size: 18px;
+  color: #eeeeee;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 1024px) {
+  .usp-box {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .usp-section {
+    margin-top: 30px;
+  }
+  .usp-box {
+    width: 45%;  /* Display 2 cards per row */
+    padding: 20px;
+    margin: 10px auto;
+  }
+
+  .usp-number {
+    font-size: 28px;
+  }
+
+  .usp-text {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .usp-section {
+    margin-top: 30px;
+  }
+  .usp-box {
+    width: 45%;  /* Maintain 2 cards per row on smaller screens */
+    padding: 20px;
+    margin: 10px auto;
+  }
+
+  .usp-number {
+    font-size: 24px;
+  }
+
+  .usp-text {
+    font-size: 14px;
+  }
+}
