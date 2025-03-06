@@ -1,9 +1,9 @@
 import React from 'react';
 import './Banner.scss';
 import {Link} from 'react-router-dom';
-import bannerImg from '../../assets/banner/1.png';
+// import bannerImg from '../../assets/banner/1.png';
 import bannerPattern from '../../assets/banner/pattern_02.png';
-import shapeOne from '../../assets/banner/vector_01.png';
+// import shapeOne from '../../assets/banner/vector_01.png';
 import shapeTwo from '../../assets/banner/vector_02.png';
 import shapeThree from '../../assets/banner/vector_03.png';
 import shapeFour from '../../assets/banner/pattern.png';

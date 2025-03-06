@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar/Navbar';
 import Appointment from './Appointment/Appointment';
+import Associates from './associate_dentist/associates';
 import Banner from './Banner/Banner';
 import USP from './Usp/usp';
 import Footer from './Footer/Footer';
@@ -24,6 +25,7 @@ const Home = () => {
             <Clinic />
             <Services/>
             <Dentist />
+            <Associates />
             <Gallery/>
             <Equipments/>
             <Testimonial/>
