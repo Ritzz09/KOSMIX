@@ -112,7 +112,7 @@ const ContactForm = () => {
                 </div>
 
                 <div className="col-lg-6">
-                    <button type="submit" className="btn appointment-btn">Book An appointment</button>
+                    <button type="submit" className="btn appointment-btn">Book An Appointment</button>
                 </div>
                 <div className="col-lg-6">
                     <div className="appointment-call">
