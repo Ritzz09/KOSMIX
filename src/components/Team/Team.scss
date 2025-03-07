@@ -65,6 +65,7 @@
 // Slider Navigation Arrows
 .slick-prev:before,
 .slick-next:before {
+  display: none;
   font-family: 'slick';
   font-size: 20px;
   line-height: 1;

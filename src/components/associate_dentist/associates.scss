@@ -1,13 +1,13 @@
 @import '../../sass/colors.scss';
 
 .associates-section {
-    max-width: 95vw;
+    // max-width: 95vw;
     overflow: visible;
     margin: 20px auto;
-    padding: 50px 5vw;
-    background-color: rgba(156, 81, 71, 0.22);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    border-radius: 18px;
+    padding: 50px;
+    // background-color: rgba(245, 222, 179, 0.306);
+    // box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    // border-radius: 18px;
     z-index: -1;
 
     .container {
@@ -58,7 +58,7 @@
         text-align: justify;
         justify-self: left;
         max-width: 600px;
-        margin-top: 10px;
+        // margin-top: 10px;
         transition: all 0.3s ease;
         font-weight: bold;
 
@@ -104,8 +104,8 @@
         }
 
         li {
-            color: black;
-            font-size: 1.05rem; /* Reduced font size slightly */
+            color: #444;
+            font-size: 16px; /* Reduced font size slightly */
             line-height: 1.5; /* Reduced line height for closer text spacing */
             text-align: justify;
             justify-self: right;
@@ -185,7 +185,7 @@
         
 
         .team-img1 {
-            width: 270px;
+            width: 200px;
             height: 400px;
             margin: 15px auto;
 

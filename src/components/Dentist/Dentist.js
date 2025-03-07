@@ -19,6 +19,9 @@ const Dentist = () => {
                             <span className="highlight">Dr. Shankhadeep Saha</span>
                         </h2>
 
+                        <p style={{ color: 'black', fontWeight: 'bold', letterSpacing: '0.5px', textTransform: 'capitalize' }}>
+                            MDS in Periodontics & Implantology
+                        </p>
                         <div className="team-img d-lg-none d-block mb-4">
                             <img src={docImage} alt="Dr. Shankhadeep Saha" className="img-fluid rounded" />
                         </div>

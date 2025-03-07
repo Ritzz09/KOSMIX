@@ -13,9 +13,9 @@ import doc4 from "../../assets/associates/salman.jpeg";
 
 const associatesData = [
   {
-    name: "Dr. Sophia Saud, MDS",
+    name: "Dr. Sophia Saud",
     image: doc1,
-    info: "Endodontist & Aesthetic Specialist",
+    info: "MDS Endodontist & Aesthetic Specialist",
     details: [
       "Dr. Sophia Saud is a dedicated and highly skilled Endodontist and Aesthetic Specialist with a Master’s degree in Conservative Dentistry and Endodontics. She specializes in restorations, root canal treatments (RCTs), regenerative endodontic procedures, laser dentistry, smile designing, and veneer placements. Her expertise ensures patients receive top-tier dental care tailored to their unique needs.",
       "Committed to delivering the highest standard of care, Dr. Sophia follows strict clinical protocols and performs all treatments under high-powered magnification and proper isolation. This meticulous approach guarantees exceptional accuracy, improved patient comfort, and long-term treatment success. She continuously incorporates the latest advancements and techniques to enhance patient outcomes.",
@@ -59,7 +59,7 @@ const Associates = () => {
 
   return (
     <section id="associates" className="associates-section pt-100" data-aos="fade-up" data-aos-duration="2000">
-      <h2 className="associates-title">Associate Dentist</h2>
+      <h2 className="associates-title">Our Expert Team</h2>
       <div className="container">
         <Swiper
           modules={[Pagination]}

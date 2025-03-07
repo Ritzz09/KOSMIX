@@ -16,6 +16,7 @@
     z-index: 1;
     transition: all 0.3s ease-in-out;
 
+
     &::before {
         content: "";  
         position: absolute;
@@ -39,7 +40,7 @@
 
         img {
             width: 100%;
-            height: 100%;
+            height: 60%;
             display: block;
             border-radius: 12px;
             
@@ -67,7 +68,7 @@
     }
 
     .priority-text {
-        max-width: 600px;
+        max-width: 800px;
         margin-bottom: 20px;
         text-align: left;
 
@@ -78,7 +79,7 @@
             color: #511c17ea;
 
             .highlight {
-                color: #852e26ea;
+                color: rgba(96, 23, 16, 0.9176470588);
             }
         }
 
@@ -181,7 +182,7 @@
 
     .priority-text {
         flex: 1;
-        padding-right: 30px;
+        // padding-right: 30px;
     }
 
     .priority-slider {

@@ -9,14 +9,15 @@ import location from "../../assets/footer/location.png";
 
 const Footer = () => {
   const footerMenu = [
-    { name: "About Clinic", link: "#clinic" },
+    { name: "About", link: "#clinic" },
     { name: "Services", link: "#services" },
-    { name: "About Dentist", link: "#dentist" },
-    { name: "Patient Gallery", link: "#gallery" },
-    // { name: "Team", link: "#team" },
-    { name: "Equipments", link: "#equipments" },
+    { name: "Dentist", link: "#dentist" },
+    { name: "Team", link: "#associates" },
+    { name: "Gallery", link: "#gallery" },
+    
+    // { name: "Equipments", link: "#equipments" },
     { name: "Testimonials", link: "#testimonials" },
-    { name: "Contact Us", link: "#contact" },
+    { name: "Contact", link: "#contact" },
   ];
 
   const footerContacts = [
@@ -24,19 +25,19 @@ const Footer = () => {
       title: "Phone Number",
       info: (
         <>
-          9035383984 <br /> 8042083115
+          9035383984 <br /> 080 4208 3115
         </>
       ),
       icon: call,
     },
     {
       title: "Open Hours",
-      info: "10:00 AM - 10:00 PM",
+      info: "10:00 AM - 11:00 PM",
       icon: time,
     },
     {
       title: "Clinic Address",
-      info: "1086 24th A Cross, 1161/1, 23rd Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
+      info: "1086 Ground Floor 24th, A Cross 1161/1, 23rd Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
       icon: location,
     },
   ];

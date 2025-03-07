@@ -12,17 +12,20 @@ const Appointment = () => {
         <section id='contact' className='appointment-section pb-70' data-aos="fade-up" data-aos-duration="2000">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-7 col-md-6">
-                        <div className="appointment-form-area">
-                            <SectionTitle 
+                    <div style={{padding:'80px'}} className="col-lg-8 col-md-6">
+                        <div  className="appointment-form-area">
+                            {/* <SectionTitle 
                             subTitle="Get in Touch with Us"
                             title ="Book an Appointment or Visit Us at HSR Layout Today!"
-                            />
+                            /> */}
+                            <h2 className='section-title'>Get in Touch with Us</h2>
+                            <h3 className='section-title'>Book an Appointment or Visit Us at HSR Layout Today!</h3>
+
 
                             <ContactForm />
                         </div>
                     </div>
-                     <div className="col-lg-5 col-md-6">
+                     <div className="col-lg-4 col-md-6">
                         <h2>Our Location</h2>
                         <div className="google-map">
                             <iframe title='map' src={mapLink}></iframe>

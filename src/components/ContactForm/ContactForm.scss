@@ -10,7 +10,7 @@
     border: 1px solid transparent;
     font-size: 14px;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
     display: inline-block;
 
     &:hover {
@@ -36,13 +36,13 @@
     }
 
     .form-control {
-        height: 50px;
+        height: 40px;
         border-radius: 14px;
         border: 1.5px dashed #511c17ea;
     }
 
     textarea {
-        height: 150px !important;
+        height: 100px !important;
     }
 }
 

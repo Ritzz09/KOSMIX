@@ -1,6 +1,15 @@
 .gallery-section {
     margin-top: 30px;
     margin-bottom:50px;
+    padding-bottom: 100px;
+    background-color: rgb(156 81 71 / 22%);
+    --mask:
+            
+            radial-gradient(67.08px at 50% calc(100% - 90px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%,
+            radial-gradient(67.08px at 50% calc(100% + 60px), #0000 99%, #000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+
 
     @media (max-width: 575px) {
         margin-top: 5px;

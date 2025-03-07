@@ -56,3 +56,41 @@
     }
   }
 }
+
+.slick-dots {
+  bottom: 15px; /* Adjust position if needed */
+
+  li {
+      width: 24px;
+      height: 24px;
+
+      button {
+          width: 100%;
+          height: 100%;
+
+          &:before {
+              font-family: 'slick';
+              font-size: 12px !important; /* Increase size */
+              line-height: 12px !important;
+              width: 12px !important;
+              height: 12px !important;
+              content: '•' !important; /* Keeps the dot */
+              text-align: center;
+              opacity: 0.5 !important; /* Default transparency */
+              color: gray !important; /* Default color */
+              transition: all 0.3s ease-in-out !important;
+          }
+      }
+
+      &.slick-active {
+          button {
+              &:before {
+                  opacity: 1 !important; /* Fully visible active dot */
+                  color: brown !important; /* Active color */
+                  transform: scale(1.3) !important; /* Slightly bigger active dot */
+              }
+          }
+      }
+  }
+}
+

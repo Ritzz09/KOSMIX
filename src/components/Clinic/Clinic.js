@@ -37,7 +37,7 @@ const Priority = () => {
         <section id="clinic" className="priority-section pt-100">
             <div className="container">
                 <div className="row align-items-center flex-column-reverse flex-lg-row">
-                    <div className="col-lg-7">
+                    <div className="col-lg-8">
                         <div className="priority-text">
                             <h2 className="section-title">
                                 Welcome to <br />
@@ -68,7 +68,7 @@ const Priority = () => {
                             )}
                     </div>
 
-                    <div className="col-lg-5 text-center">
+                    <div className="col-lg-4 text-center">
                         <div className="priority-slider">
                             <Swiper
                                 modules={[Navigation, Pagination, Autoplay]}

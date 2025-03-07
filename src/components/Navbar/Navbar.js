@@ -19,6 +19,10 @@ const Navbar = () => {
             path: '#dentist',
         },
         {
+            name: 'TEAM',
+            path: '#associates',
+        },
+        {
             name: 'GALLERY',
             path: '#gallery',
         },

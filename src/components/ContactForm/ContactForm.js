@@ -112,7 +112,7 @@ const ContactForm = () => {
                 </div>
 
                 <div className="col-lg-6">
-                    <button type="submit" className="btn appointment-btn">Book an appointment</button>
+                    <button type="submit" className="btn appointment-btn">Book An appointment</button>
                 </div>
                 <div className="col-lg-6">
                     <div className="appointment-call">
@@ -120,9 +120,9 @@ const ContactForm = () => {
                             <img src={icon} alt="icon" />
                         </div>
                         <div className='call-text'>
-                            <p>Dental 24H Emergency</p>
+                            {/* <p>Dental 24H Emergency</p> */}
                             <h6><a href="tel:+919035383984">90353 83984</a></h6>
-                            <h6><a href="tel:+918042083115">80420 83115</a></h6>
+                            <h6><a href="tel:080 4208 3115">080 4208 3115</a></h6>
                         </div>
                     </div>
                 </div>
