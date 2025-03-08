@@ -30,6 +30,7 @@
     .priority-slider {
         width: 100%;
         // max-width: 500px;
+        
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
@@ -89,6 +90,7 @@
             text-align: justify;
             color: #444;
             margin-top: 20px;
+            
         }
 
         .theme-btn {
@@ -117,7 +119,7 @@
 
     .priority-text {
         order: 1;  // Title/Subtitle on top
-        padding: 10px;
+        // padding: 10px;
 
         .section-title {
             font-size: 1.8rem;
@@ -127,7 +129,7 @@
     .priority-slider {
         order: 2;  // Image Slider in the middle
         width: 100%;
-        margin: 20px 0;
+        // margin: 20px 0;
     }
 
     .priority-text .description {
@@ -257,3 +259,4 @@
         background: darken($color-blue, 10%);
     }
 }
+

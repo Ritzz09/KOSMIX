@@ -36,14 +36,13 @@ const Priority = () => {
     return (
         <section id="clinic" className="priority-section pt-100">
             <div className="container">
-                <div className="row align-items-center flex-column-reverse flex-lg-row">
-                    <div className="col-lg-8">
-                        <div className="priority-text">
-                            <h2 className="section-title">
+            <h2 className="section-title">
                                 Welcome to <br />
                                 <span className="highlight">Kosmix Dental Clinic</span>
                             </h2>
-
+                <div className="row align-items-center flex-column-reverse flex-lg-row">
+                    <div className="col-lg-8">
+                        <div className="priority-text">
                             {/* First Paragraph (Always Visible) */}
                             <p className="description">
                                 Kosmix Dental Clinic features a team of highly skilled dentists in HSR Layout, dedicated to providing exceptional dental care tailored to each patient’s needs. With a focus on both preventive and restorative treatments, the clinic ensures that every visit is a positive experience, combining expertise with a compassionate approach.
@@ -54,8 +53,9 @@ const Priority = () => {
                                 <p className="description">
                                     As a leading dental clinic in HSR Layout, it is equipped with state-of-the-art technology and adheres to the highest standards of hygiene and patient care. The clinic's commitment to excellence is reflected in the personalized treatment plans designed to achieve optimal oral health and beautiful smiles for all patients.
                                     <br /><br />
-                                    Our approach is patient-centered, ensuring that you receive the best possible care in a comfortable and welcoming environment. Whether you need a routine check-up, advanced dental treatments, or a complete smile makeover, we are here to help.
-                                </p>
+                                    Our approach is patient-centered, ensuring that you receive the best possible care in a comfortable and welcoming environment. Whether you need a routine check-up, advanced dental treatments, or a complete smile makeover, we are here to help. We also offer cosmetic dentistry, pediatric care, and specialized orthodontic solutions to cater to patients of all ages. Our expert team ensures pain-free procedures, innovative techniques, and a stress-free dental experience.<br /><br />
+                                    Additionally, we provide emergency dental care, ensuring that urgent issues such as toothaches, fractures, or infections are addressed promptly. Our commitment to patient satisfaction drives us to stay updated with the latest advancements in dentistry, delivering cutting-edge treatments.
+                                    </p>
                             </div>
 
                             {/* Read More / Read Less Button (Only for Mobile) */}
