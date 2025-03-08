@@ -26,6 +26,12 @@ const Testimonial = () => {
             'ratings': [<AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>]
         },
         {
+            'img': imgfive,
+            'name': 'Aryan Gupta',
+            'description' : "I had a great experience. Dr. Shankhadeep's professionalism and expertise in dental implants are impressive. The clinic is well-equipped and clean.",
+            'ratings': [<AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>]
+        },
+        {
             'img': imgThree,
             'name': 'Sania Mahajan',
             'description' : 'Dr. Shankhadeep performed my dental checkup and gave great advice. Kosmix Dental Clinic is a reliable and professional place for dental care.',
@@ -40,7 +46,7 @@ const Testimonial = () => {
         {
             'img': imgfive,
             'name': 'Aryan Gupta',
-            'description' : "I had a great experience. Dr. Shankhadeep's professionalism and expertise in dental implants are impressive. The clinic is well-equipped and clean.",
+            'description' : "I had a great experience with Dr. Kishan Panicker G.* for my tooth extraction. The extraction was smooth, and I experienced minimal discomfort during recovery. I’m very pleased with the results and would highly recommend Dr. Panicker for any oral surgery needs!",
             'ratings': [<AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>]
         }
     ];

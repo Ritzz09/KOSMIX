@@ -12,7 +12,7 @@ const Appointment = () => {
         <section id='contact' className='appointment-section pb-70' data-aos="fade-up" data-aos-duration="2000">
             <div className="container">
                 <div className="row align-items-center">
-                    <div style={{padding:'80px'}} className="col-lg-8 col-md-6">
+                    <div style={{padding:'20px'}} className="col-lg-8 col-md-6">
                         <div  className="appointment-form-area">
                             {/* <SectionTitle 
                             subTitle="Get in Touch with Us"

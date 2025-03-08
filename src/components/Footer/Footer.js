@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/footer_logo.png";
 import "./Footer.scss";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaPinterest } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import call from "../../assets/footer/calling.png";
 import time from "../../assets/footer/time.png";
@@ -60,14 +60,20 @@ const Footer = () => {
             <div className="social-icons">
               <p>Follow us on:</p>
               <div className="icons">
-                <a href="/">
+                <a target="_blanked" href="https://www.facebook.com/kosmixhsr">
                   <FaFacebookF />
                 </a>
-                <a href="/">
+                <a target="_blanked" href="https://x.com/kosmixhsr">
                   <FaTwitter />
                 </a>
-                <a href="/">
+                <a target="_blanked" href="https://www.instagram.com/kosmixhsr/">
                   <FaInstagram />
+                </a>
+                <a target="_blanked" href="https://www.youtube.com/@kosmixhsr">
+                  <FaYoutube />
+                </a>
+                <a target="_blanked" href="https://www.pinterest.com/kosmixhsr/">
+                  <FaPinterest />
                 </a>
               </div>
             </div>
@@ -80,7 +86,7 @@ const Footer = () => {
             <ul className="footer-links">
               {footerMenu.map((singleMenu, index) => (
                 <li key={index}>
-                  <a href={singleMenu.link}>{singleMenu.name}</a>
+                  <a target="_blanked" href={singleMenu.link}>{singleMenu.name}</a>
                 </li>
               ))}
             </ul>
@@ -111,7 +117,7 @@ const Footer = () => {
         <div className="footer-bottom">
         <p>
   &copy; 2025 Symphony Dental Care. Design by{" "}
-  <a href="https://mastermindweb.in/" target="_blank" rel="noopener noreferrer">
+  <a target="_blanked" href="https://mastermindweb.in/" rel="noopener noreferrer">
     MasterMind Web Developers
   </a>
 </p> 

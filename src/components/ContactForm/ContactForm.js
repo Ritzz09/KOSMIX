@@ -111,10 +111,10 @@ const ContactForm = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-6">
-                    <button type="submit" className="btn appointment-btn">Book An Appointment</button>
+                <div className="col-lg-8">
+                    <button type="submit" style={{fontWeight:'bold'}} className="btn appointment-btn">Book An Appointment</button>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-4">
                     <div className="appointment-call">
                         <div className='icon'>
                             <img src={icon} alt="icon" />
