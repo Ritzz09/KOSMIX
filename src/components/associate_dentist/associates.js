@@ -48,6 +48,36 @@ const associatesData = [
       "Dental Implants & Grafting Procedures Specialist.",
       "10+ years of Teaching Experience."
     ]
+  },
+  {
+    name: "Dr. Neelima B Prakash",
+    image: doc3,
+    info: "Dental Surgeon",
+    details: [
+      "Dr. Neelima B Prakash is a committed and proficient dental professional with a degree from Navodaya Dental College and Hospital. She is passionate about delivering precise and high-quality care.",
+      "With expertise in advanced regenerative therapies and smile enhancements, Dr. Neelima’s keen attention to detail and patient-focused approach make her a reliable choice for comprehensive and modern dental care."
+    ],
+    bulletPoint: [
+      "Dental Surgeon.",
+      "Expert in RCTs, extractions, & restorations.",
+      "Skilled in teeth whitening & smile enhancements."
+    ]
+  },
+  {
+    name: "Dr. Salman Khan",
+    image: doc4,
+    info: "🏅Platinum Elite Invisalign",
+    details: [
+      "Dr. Salman Khan is a highly respected orthodontist with over 15 years+ of experience in the dental field. He has treated over 2,000+ orthodontic patients and more than 10,000+ general dentistry patients.",
+      "His expertise in creating beautiful, healthy smiles, combined with his recognition as one of India's top 1% Invisalign platinum elite providers, makes him a leading figure in orthodontics."
+    ],
+    bulletPoint: [
+      "15+ years experience in orthodontics.",
+      "Top 1% Invisalign provider in India.",
+      "Platinum Elite & Gold 2 Invisalign titles (2023).",
+      "2,000+ orthodontic & 10,000+ dental patients treated.",
+      "Align Speaker & expert in smile transformation."
+    ]
   }
 ];
 
@@ -101,7 +131,7 @@ const Associates = () => {
                     {doctor.bulletPoint && expandedIndex === index && (
                       <ul className="bullet-points">
                         {doctor.bulletPoint.map((point, i) => (
-                          <li key={i}>{point}</li>
+                          <li key={i}>★ {point}</li>
                         ))}
                       </ul>
                     )}
@@ -122,7 +152,7 @@ const Associates = () => {
                     {doctor.bulletPoint && (
                       <ul className="bullet-points">
                         {doctor.bulletPoint.map((point, i) => (
-                          <li key={i}>{point}</li>
+                          <li key={i}>★ {point}</li>
                         ))}
                       </ul>
                     )}

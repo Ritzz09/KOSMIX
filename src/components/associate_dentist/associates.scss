@@ -113,6 +113,7 @@
             margin-top: 10px;
             
         }
+        
     }
 
     .team-img1 {
@@ -285,7 +286,7 @@
 }
 
 .bullet-points {
-    list-style-type: disc; /* Ensures bullet points appear */
+    list-style:none; /* Ensures bullet points appear */
     margin-left: 190px; /* Adds the required left margin */
     padding-left: 0; /* Ensures consistent spacing */
     font-weight: 500;
@@ -293,8 +294,8 @@
   
   .bullet-points li {
     font-size: 16px; /* Adjusts text size for readability */
-    color: #333; /* Dark grey for a professional look */
-    line-height: 1.6; /* Improves readability */
+    color:#333; /* Dark grey for a professional look */
+    line-height: 2.2; /* Improves readability */
   }
 
   .swiper-button-prev,
@@ -319,6 +320,7 @@
 .swiper-button-next::after {
   background: transparent !important;
   box-shadow: none !important;
+  list-style: none;
 }
 
 .swiper-button-prev {

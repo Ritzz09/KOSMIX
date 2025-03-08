@@ -6,6 +6,7 @@ import imgTwo from '../../assets/testimonial/2.png';
 import imgThree from '../../assets/testimonial/3.png';
 import imgfour from '../../assets/testimonial/4.jpg';
 import imgfive from '../../assets/testimonial/5.jpg';
+import imgsix from '../../assets/testimonial/6.jpg';
 import TestimoniCard from '../../components/TestimoniCard/TestimoniCard';
 import { AiFillStar } from "react-icons/ai";
 import Slider from "react-slick";
@@ -44,8 +45,8 @@ const Testimonial = () => {
             'ratings': [<AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>]
         },
         {
-            'img': imgfive,
-            'name': 'Aryan Gupta',
+            'img': imgsix,
+            'name': 'Lamia Sharfudheen',
             'description' : "I had a great experience with Dr. Kishan Panicker G.* for my tooth extraction. The extraction was smooth, and I experienced minimal discomfort during recovery. I’m very pleased with the results and would highly recommend Dr. Panicker for any oral surgery needs!",
             'ratings': [<AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>, <AiFillStar/>]
         }
