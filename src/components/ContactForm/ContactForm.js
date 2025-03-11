@@ -1,33 +1,57 @@
 import React, { useState } from 'react';
 import './ContactForm.scss';
 import icon from '../../assets/banner/icons/Calling.png';
-import axios from 'axios';
+// import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
+const initialState = {
+  name: "",
+  email: "",
+  mobile: "",
+  interest: "",
+  message: "",
+  appointmentDate: "",
+};
 const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-    });
+    const navigate = useNavigate(); // Initialize navigation
+  const [formData, setFormData] = useState(initialState);
+  const [loading, setLoading] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            await axios.post('http://localhost:5001/api/sendmail', formData);
+  // Clear form data
+  const clearState = () => setFormData({ ...initialState });
 
-            alert('Appointment request sent successfully!');
-            setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-        } catch (error) {
-            alert('Failed to send appointment request. Please try again.');
-        }
-    };
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        clearState();
+        navigate("/thankyou"); // Navigate to Thank You page
+      } else {
+        alert(result.error || "Something went wrong");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error sending appointment request");
+    } finally {
+      setLoading(false);
+    }
+  };
 
     return (
         <form onSubmit={handleSubmit}>
