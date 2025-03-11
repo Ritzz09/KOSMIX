@@ -94,3 +94,34 @@
   }
 }
 
+.elfsight-widget-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centering widget */
+  align-items: center;
+  padding: 10px; /* Adds some space around */
+}
+
+.elfsight-app-d22ef220-0e8f-4f1b-8405-3c07ffe8e949 {
+  width: 100%;
+  max-width: 1200px; /* Increased width for larger screens */
+}
+
+@media screen and (max-width: 1024px) {
+  .elfsight-app-d22ef220-0e8f-4f1b-8405-3c07ffe8e949 {
+    max-width: 100%; /* Allow full width on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .elfsight-widget-container {
+    height: auto;
+    min-height: 350px; /* Increased height for better visibility */
+    margin-bottom: 30px; /* More spacing to prevent overlap */
+  }
+  
+  .elfsight-app-d22ef220-0e8f-4f1b-8405-3c07ffe8e949 {
+    max-width: 95%; /* Use most of the screen width on mobile */
+  }
+}
+
