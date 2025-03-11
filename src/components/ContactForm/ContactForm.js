@@ -71,14 +71,30 @@ const ContactForm = () => {
                                 value={formData.phone} 
                                 onChange={handleChange} 
                                 className="form-control phone-input" 
-                                placeholder="+91  Enter phone number..." 
-                                pattern="[0-9]{10}" 
+                                placeholder="Enter phone number..." 
+                                pattern="[0-9]" 
                                 required 
                             />
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-6">
+                    <div className="form-group">
+                        <label>Appointment Date</label>
+                        <div className="phone-input-group">
+                            <input 
+                                type="date" 
+                                name="appointmentDate" 
+                                value={formData.appointmentDate} 
+                                onChange={handleChange} 
+                                className="form-control" 
+                                placeholder="Select Appointment Date" 
+
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-12">
                     <div className="form-group">
                         <label>Service</label>
                         <select 
@@ -87,12 +103,15 @@ const ContactForm = () => {
                             onChange={handleChange} 
                             className="form-control" 
                           
-                        >
-                            <option value="">Select Service</option>
-                            <option value="Teeth Whitening">Teeth Whitening</option>
-                            <option value="Dental Implants">Dental Implants</option>
-                            <option value="Orthodontics">Orthodontics</option>
-                            <option value="General Checkup">General Checkup</option>
+                        ><option value="">Choose Your Treatment</option>
+                        <option value="Root canal ">Root Canal </option>
+                        <option value="Dental Implants ">Dental Implants </option>
+                        <option value="Dental Veneers ">Dental Veneers </option>
+                        <option value="Aligners ">Aligners </option>
+                        <option value="Crown & Bridges">Crown & Bridges </option>
+                        <option value="Teeth Whitening">Teeth Whitening</option>
+                        <option value="Teeth Cleaning">Teeth Cleaning</option>
+                        <option value="Other">Other</option>
                         </select>
                     </div>
                 </div>

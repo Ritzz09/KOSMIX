@@ -116,7 +116,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
         <p>
-  &copy; 2025 Symphony Dental Care. Design by{" "}
+  &copy; 2025 Kosmix Dental Clinic. Design by{" "}
   <a target="_blanked" href="https://mastermindweb.in/" rel="noopener noreferrer">
     MasterMind Web Developers
   </a>
