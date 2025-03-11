@@ -1,0 +1,88 @@
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Required for overlay */
+  background-image: url("../assets/about/clinic/3.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Black Overlay */
+.thank-you-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+  z-index: 1;
+}
+
+/* Ensuring content stays above the overlay */
+.thank-you-box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: rgba(231, 197, 191, 0.463); /* Slight transparency for better visibility */
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Adds a glass effect */
+  color: white; /* Makes text readable */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 55%;
+  border:#491c1c dashed 2px;
+}
+
+/* SVG Envelope Icon */
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.svg-icon {
+  width: 100px;
+  height: 100px;
+  stroke-width: 1.5;
+  stroke: url(#gradient);
+}
+
+/* Heading */
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Paragraph */
+.paragraph {
+  font-size: 22px ;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50px;
+  background: linear-gradient(to right, #491c1c, rgb(139, 90, 73));
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
