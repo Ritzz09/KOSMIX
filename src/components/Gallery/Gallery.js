@@ -10,11 +10,9 @@ import imgOne from '../../assets/servicePage/gallery/1.png';
 import imgTwo from '../../assets/servicePage/gallery/2.png';
 import imgThree from '../../assets/servicePage/gallery/3.png';
 import imgFour from '../../assets/servicePage/gallery/4.png';
-import imgFive from '../../assets/servicePage/gallery/5.png';
-import imgSix from '../../assets/servicePage/gallery/6.png';
 
 const Gallery = () => {
-    const images = [imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix];
+    const images = [imgOne, imgTwo, imgThree, imgFour];
 
     return (
         <section id='gallery' className='gallery-section pt-100 pb-70' data-aos="fade-up" data-aos-duration="2000">
@@ -29,7 +27,7 @@ const Gallery = () => {
                     spaceBetween={30}
                     slidesPerView={3}
                     navigation
-                    pagination={{ clickable: true }}
+                    pagination={{ el: ".custom-pagination", clickable: true }}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     loop={true}
                     className="gallery-slider"
@@ -47,6 +45,9 @@ const Gallery = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+
+                {/* Move Pagination Below */}
+                <div className="custom-pagination"></div>
             </div>
         </section>
     );

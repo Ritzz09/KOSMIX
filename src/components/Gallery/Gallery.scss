@@ -1,15 +1,13 @@
 .gallery-section {
     margin-top: 30px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     padding-bottom: 100px;
     background-color: rgb(156 81 71 / 22%);
     --mask:
-            
-            radial-gradient(67.08px at 50% calc(100% - 90px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%,
-            radial-gradient(67.08px at 50% calc(100% + 60px), #0000 99%, #000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
-        -webkit-mask: var(--mask);
-        mask: var(--mask);
-
+        radial-gradient(67.08px at 50% calc(100% - 90px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%,
+        radial-gradient(67.08px at 50% calc(100% + 60px), #0000 99%, #000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
 
     @media (max-width: 575px) {
         margin-top: 5px;
@@ -47,14 +45,14 @@
     }
 
     .gallery-slider {
-        height: 350px;  // Default container height
+        height: 320px;
 
         @media (max-width: 1024px) {
-            height: 350px;  // Adjust container height for tablets
+            height: 320px;
         }
 
         @media (max-width: 768px) {
-            height: 400px;  // Adjust container height for mobile
+            height: 300px;
         }
 
         .swiper-slide {
@@ -65,7 +63,7 @@
             transition: transform 0.3s ease;
 
             &:hover {
-                transform: scale(1.03);
+                transform: scale(1.01);
             }
         }
 
@@ -80,7 +78,6 @@
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
                 transition: transform 0.3s ease;
             }
 
@@ -93,13 +90,19 @@
         }
     }
 
-    // Dots Pagination
-    .swiper-pagination-bullets {
-        bottom: 10px;
+    // Custom Pagination Below the Slider
+    .custom-pagination {
+        position: relative;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
 
         .swiper-pagination-bullet {
-            background: #c952478a;
+            background: #b75047ac;
             opacity: 0.7;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
             transition: background 0.3s;
 
             &-active {
