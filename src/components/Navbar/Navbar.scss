@@ -28,12 +28,17 @@
                     font-size: 15px;
                     font-weight: 600;
                     padding: 0;
-                    margin: 10px 30px;
+                    margin: 10px 30px;  
                     
 
                     &:hover {
-                        color: $color-blue;
-                        text-decoration: underline;
+                        color: rgb(230, 216, 190);
+                        // text-decoration: underline;
+                        // border: solid black 2px;
+                        background-color: rgb(89, 27, 27);
+                        border-radius: 20px;
+                        padding: 10px;
+                        font-size: 20px;
                         
                     }
                 }
