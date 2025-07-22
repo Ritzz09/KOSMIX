@@ -116,7 +116,7 @@ const Associates = () => {
                     <img src={doctor.image} alt={doctor.name} className="img-fluid square-img" />
                   </div>
                 </div>
-                <div className="col-lg-9">
+                <div className="col-12 col-lg-9">
                   <h2 className="associates-name">{doctor.name}</h2>
                   
                   {/* Mobile View */}

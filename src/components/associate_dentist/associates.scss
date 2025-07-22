@@ -177,13 +177,15 @@
 
         .pt-3 {
             font-size: 16px;
-            // max-width: 80%; // Reduce width to keep text compact
-            padding: 0 10px; // Reduce padding to avoid extra space
-            line-height: 1.4; // Reduce line height for tighter spacing
+            padding: 0 10px;
+            line-height: 1.4;
             font-weight: bold;
-            margin: 0 auto; // Proper centering
-            text-align: center; // Ensures center alignment
+            margin: 0;
+            text-align: justify;
+            width: 100%;
+            max-width: 100%;
         }
+
         
 
         .team-img1 {
@@ -198,20 +200,25 @@
         }
 
         .associates-list {
-            font-size: 16px;
-            text-align: left;
-            display: none;
-        }
+            margin-left: 0 !important;
+            padding: 0 10px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            text-align: justify;
+            }
 
         .associates-list.expanded {
             display: flex;
             flex-direction: column;
         }
     }
-    .bullet-points{
-        margin-left: 20px !important;
+    .bullet-points {
+        margin-left: 0 !important;
+        padding: 0 10px !important;
         text-align: left !important;
-    }
+        width: 100% !important;
+        max-width: 100% !important;
+        }
         .swiper-button-prev::after,
         .swiper-button-next::after {
             display: none;
