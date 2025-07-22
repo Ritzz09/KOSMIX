@@ -22,7 +22,7 @@ const Banner = () => {
                             <div className="col-lg-12">
                                 <div className="banner-text" data-aos="fade-up" data-aos-duration="2000">
                                     <h1>Creating Beautiful Smiles Every Day</h1>
-                                    <p> Advanced Dental Care in HSR Layout, Bangalore</p>
+                                    <p> Your Trusted Dental Clinic in HSR Layout, Bengaluru</p>
 
                                     <div className="banner-bottom">
                                         <div className="theme-btn">

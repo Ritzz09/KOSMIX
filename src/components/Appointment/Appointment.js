@@ -19,7 +19,7 @@ const Appointment = () => {
                             title ="Book an Appointment or Visit Us at HSR Layout Today!"
                             /> */}
                             <h2 className='section-title'>Get in Touch with Us</h2>
-                            <h3 className='section-title'>Book an Appointment or Visit Us at HSR Layout Today!</h3>
+                            <h3 className='section-title'>Visit Our Dental Clinic in HSR Layout Today!</h3>
 
 
                             <ContactForm />

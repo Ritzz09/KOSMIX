@@ -19,7 +19,7 @@ const associatesData = [
     image: doc1,
     info: "MDS Endodontist & Aesthetic Specialist",
     details: [
-      "Dr. Sophia Saud is a dedicated and highly skilled Endodontist and Aesthetic Specialist with a Master’s degree in Conservative Dentistry and Endodontics. She specializes in restorations, root canal treatments (RCTs), regenerative endodontic procedures, laser dentistry, smile designing, and veneer placements.",
+      "Dr. Sophia Saud is a highly skilled Endodontist & Aesthetic Specialist in HSR Layout, with a Master’s degree in Conservative Dentistry and Endodontics. She specializes in restorations, root canal treatments (RCTs), regenerative endodontic procedures, laser dentistry, smile designing, and veneer placements.",
       "Committed to delivering the highest standard of care, Dr. Sophia follows strict clinical protocols and performs all treatments under high-powered magnification and proper isolation.",
       "Whether revitalizing teeth through advanced regenerative therapies or crafting flawless, natural-looking smiles, Dr. Sophia’s patient-centered approach sets her apart."
     ],
@@ -52,9 +52,9 @@ const associatesData = [
   {
     name: "Dr. Neelima B Prakash",
     image: doc3,
-    info: "Dental Surgeon",
+    info: "Dental Surgeon in HSR Layout",
     details: [
-      "Dr. Neelima B Prakash is a committed and proficient dental professional with a degree from Navodaya Dental College and Hospital. She is passionate about delivering precise and high-quality care.",
+      "Dr. Neelima B Prakash is a committed and proficient female dentist in HSR Layout dental, with a degree from Navodaya Dental College and Hospital. She is passionate about delivering precise and high-quality care.",
       "With expertise in advanced regenerative therapies and smile enhancements, Dr. Neelima’s keen attention to detail and patient-focused approach make her a reliable choice for comprehensive and modern dental care."
     ],
     bulletPoint: [
