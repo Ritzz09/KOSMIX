@@ -46,13 +46,19 @@ const Priority = () => {
                         <div className="priority-text">
                             {/* First Paragraph (Always Visible) */}
                             <p className="description">
-Kosmix Dental Clinic in HSR Layout features a team of highly skilled professionals dedicated to providing exceptional dental care tailored to each patient’s needs. With a focus on both preventive and restorative treatments, the clinic ensures that every visit is a positive experience, combining expertise with a compassionate approach. Led by Dr. Shankhadeep Saha, a trusted dentist in HSR, the clinic is equipped with state-of-the-art technology and adheres to the highest standards of hygiene and care. Its personalized treatment plans are designed to achieve optimal oral health and beautiful smiles for every patient.                            </p>
+Kosmix Dental Clinic in HSR Layout is led by Dr. Shankhadeep Saha, a trusted dentist in HSR, and supported by a skilled team committed to delivering personalized, high-quality care. With advanced technology and a focus on both preventive and restorative treatments, we ensure a hygienic, compassionate, and comfortable experience for every patient.
+</p>
 
                             {/* Extra Content (Initially Hidden on Mobile) */}
                             <div className={`extra-content ${isExpanded ? "show" : ""} ${isDesktop ? "desktop-visible" : ""}`}>
                                 <p className="description">
-Our approach is patient-centered, ensuring that you receive the best possible care in a comfortable and welcoming environment. Whether you need a routine check-up, advanced dental treatments, or a complete smile makeover, we are here to help. We also offer cosmetic dentistry, pediatric care, and specialized orthodontic solutions to cater to patients of all ages. Our expert team ensures pain-free procedures, innovative techniques, and a stress-free dental experience.                                    <br /><br />
-                                    Additionally, we provide emergency dental care, ensuring that urgent issues such as toothaches, fractures, or infections are addressed promptly. If you're searching for a dental clinic near me or a dentist near me, Kosmix Dental Clinic in HSR Layout is your trusted destination for expert, compassionate, and advanced dental care.<br /><br />
+We offer a comprehensive range of dental services, including root canal treatments, gum care, crowns and bridges, dentures, dental implants, braces and aligners, smile makeovers, veneers, teeth whitening, and pediatric dental care. Whether you need preventive care, restorative procedures, or cosmetic enhancements, we provide advanced solutions for every dental concern.
+<br /><br />
+At Kosmix Dental Clinic, your care is in the hands of dedicated experts. Our team includes an experienced Endodontist, Periodontist, Prosthodontist, Implantologist, Orthodontist, Cosmetic Dentist, and Pediatric Dentist in HSR Layout, each specializing in their respective fields to ensure you receive the highest quality treatment.
+<br /><br />
+We prioritize your comfort and well-being with personalized treatment plans tailored to your needs—whether it’s a routine check-up, emergency care, or a complete smile makeover. Our experienced team ensures pain-free procedures, prompt attention to urgent issues like toothaches or fractures, and a stress-free experience for patients of all ages.
+<br /><br />
+If you're searching online for a "dental clinic near me" or "dentist near me", Kosmix Dental Clinic in HSR Layout is your trusted destination for expert, compassionate, and advanced dental care.
                                     </p>
                             </div>
 
