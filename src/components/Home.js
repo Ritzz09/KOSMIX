@@ -15,43 +15,83 @@ import Dentist from "./Dentist/Dentist";
 import Equipments from "./Equipment/Equipment";
 import ThankYou from "./thankyou";
 
+// Import new service pages
+import DentalImplants from "../Pages/Services/Dental_implants";
+import CrownAndBridges from "../Pages/Services/Crown&Bridges";
+// import RootCanal from "./ServicesPages/RootCanal";
+// import TeethWhitening from "./ServicesPages/TeethWhitening";
+
 const Layout = ({ children }) => {
-    const location = useLocation();
-    return location.pathname !== "/thankyou" ? (
-        <>
-            <Navbar />
-            {children}
-            <Footer />
-        </>
-    ) : (
-        children
-    );
+  const location = useLocation();
+  return location.pathname !== "/thankyou" ? (
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  ) : (
+    children
+  );
 };
 
 const Home = () => {
-    return (
-        <Routes>
-            <Route
-                path="/"
-                element={
-                    <Layout>
-                        <Banner />
-                        <USP />
-                        <Clinic />
-                        <Services />
-                        <Dentist />
-                        <Associates />
-                        <Gallery />
-                        <Equipments />
-                        <Testimonial />
-                        <Appointment />
-                        <Scroll />
-                    </Layout>
-                }
-            />
-            <Route path="/thankyou" element={<ThankYou />} />
-        </Routes>
-    );
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <Banner />
+            <USP />
+            <Clinic />
+            <Services />
+            <Dentist />
+            <Associates />
+            <Gallery />
+            <Equipments />
+            <Testimonial />
+            <Appointment />
+            <Scroll />
+          </Layout>
+        }
+      />
+      <Route path="/thankyou" element={<ThankYou />} />
+
+      {/* Service Pages Routes */}
+      <Route
+        path="/services/dental-implants"
+        element={
+          <Layout>
+            <DentalImplants />
+          </Layout>
+        }
+      />
+       <Route
+        path="/services/Crown&Bridges"
+        element={
+          <Layout>
+            <CrownAndBridges />
+          </Layout>
+        }
+      />
+      {/* <Route
+        path="/services/root-canal"
+        element={
+          <Layout>
+            <RootCanal />
+          </Layout>
+        }
+      />
+      <Route
+        path="/services/teeth-whitening"
+        element={
+          <Layout>
+            <TeethWhitening />
+          </Layout>
+        }
+      /> */}
+    </Routes>
+  );
 };
 
 export default Home;
