@@ -17,8 +17,8 @@ import ThankYou from "./thankyou";
 import { useEffect } from "react";  
 
 // Import new service pages
-import DentalImplants from "../Pages/Services/Dental_implants";
-import CrownAndBridges from "../Pages/Services/CrownandBridges";
+
+import CrownAndBridges from "../Pages/Services/dental-crowns-and-bridges-in-hsr";
 // import RootCanal from "./ServicesPages/RootCanal";
 // import TeethWhitening from "./ServicesPages/TeethWhitening";
 
@@ -71,16 +71,8 @@ const Home = () => {
       <Route path="/thankyou" element={<ThankYou />} />
 
       {/* Service Pages Routes */}
-      <Route
-        path="/services/dental-implants"
-        element={
-          <Layout>
-            <DentalImplants />
-          </Layout>
-        }
-      />
        <Route
-        path="/services/CrownandBridges"
+        path="/services/dental-crowns-and-bridges-in-hsr"
         element={
           <Layout>
             <CrownAndBridges />

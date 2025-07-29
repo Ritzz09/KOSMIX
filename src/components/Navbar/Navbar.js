@@ -59,9 +59,13 @@ const Navbar = () => {
                       </Link>
                     </li> */}
                     <li>
-                      <Link className="dropdown-item" to="/services/CrownandBridges" onClick={handleNavLinkClick}>
-                        Crown And Bridges
-                      </Link>
+                   <Link
+  className="dropdown-item"
+  to="/services/dental-crowns-and-bridges-in-hsr"
+  onClick={handleNavLinkClick}
+>
+  Crown And Bridges
+</Link>
                     </li>
                     {/* <li>
                       <Link className="dropdown-item" to="/services/teeth-whitening" onClick={handleNavLinkClick}>
