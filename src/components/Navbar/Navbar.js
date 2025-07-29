@@ -59,7 +59,7 @@ const Navbar = () => {
                       </Link>
                     </li> */}
                     <li>
-                      <Link className="dropdown-item" to="/services/Crown&Bridges" onClick={handleNavLinkClick}>
+                      <Link className="dropdown-item" to="/services/CrownandBridges" onClick={handleNavLinkClick}>
                         Crown And Bridges
                       </Link>
                     </li>

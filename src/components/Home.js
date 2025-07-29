@@ -14,15 +14,28 @@ import Clinic from "./Clinic/Clinic";
 import Dentist from "./Dentist/Dentist";
 import Equipments from "./Equipment/Equipment";
 import ThankYou from "./thankyou";
+import { useEffect } from "react";  
 
 // Import new service pages
 import DentalImplants from "../Pages/Services/Dental_implants";
-import CrownAndBridges from "../Pages/Services/Crown&Bridges";
+import CrownAndBridges from "../Pages/Services/CrownandBridges";
 // import RootCanal from "./ServicesPages/RootCanal";
 // import TeethWhitening from "./ServicesPages/TeethWhitening";
 
 const Layout = ({ children }) => {
   const location = useLocation();
+   useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      // Wait for DOM to be ready
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0); // delay to ensure layout is mounted
+    }
+  }, [location]);
   return location.pathname !== "/thankyou" ? (
     <>
       <Navbar />
@@ -67,7 +80,7 @@ const Home = () => {
         }
       />
        <Route
-        path="/services/Crown&Bridges"
+        path="/services/CrownandBridges"
         element={
           <Layout>
             <CrownAndBridges />
