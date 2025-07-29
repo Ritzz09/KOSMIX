@@ -9,6 +9,7 @@ import { GiGoldBar } from "react-icons/gi";
 import { FaTooth, FaRegSmileBeam } from "react-icons/fa";
 import { FaMicroscope, FaSmile, FaThumbsUp, FaStar } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const CrownAndBridges = () => {
 
@@ -174,6 +175,17 @@ const CrownAndBridges = () => {
     <>
 
       <div className="service1-section">
+        <Helmet>
+        <title>Dental Crowns and Bridges Treatment in HSR Layout | Kosmix</title>
+        <meta
+          name="description"
+          content="Looking for durable and aesthetic dental crowns and bridges treatment in HSR Layout? Get expert care from our crown and bridge specialists today!"
+        />
+        <link
+          rel="canonical"
+          href="https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"
+        />
+      </Helmet>
 
         <div className="hero">
           <h1 className="service1-title-text" data-aos="fade-down" data-aos-delay="200" style={{ fontFamily: 'initial' }}>
