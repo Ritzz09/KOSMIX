@@ -176,16 +176,16 @@ const CrownAndBridges = () => {
 
       <div className="service1-section">
         <Helmet>
-        <title>Dental Crowns and Bridges Treatment in HSR Layout | Kosmix</title>
-        <meta
-          name="description"
-          content="Looking for durable and aesthetic dental crowns and bridges treatment in HSR Layout? Get expert care from our crown and bridge specialists today!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"
-        />
-      </Helmet>
+          <title>Dental Crowns and Bridges Treatment in HSR Layout | Kosmix</title>
+          <meta
+            name="description"
+            content="Looking for durable and aesthetic dental crowns and bridges treatment in HSR Layout? Get expert care from our crown and bridge specialists today!"
+          />
+          <link
+            rel="canonical"
+            href="https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"
+          />
+        </Helmet>
 
         <div className="hero">
           <h1 className="service1-title-text" data-aos="fade-down" data-aos-delay="200" style={{ fontFamily: 'initial' }}>
@@ -400,73 +400,72 @@ const CrownAndBridges = () => {
         </section>
 
         <section className="timeline-container" style={{ overflowX: 'hidden', padding: '0 1rem' }}>
-  <div className="content" data-aos="fade-up">
-    <SectionTitle title="Step-by-Step Crown & Bridge Procedure" />
-    <p className="text_first">
-      Our streamlined process ensures comfort and precision at every stage:
-    </p>
-  </div>
+          <div className="content" data-aos="fade-up">
+            <SectionTitle title="Step-by-Step Crown & Bridge Procedure" />
+            <p className="text_first">
+              Our streamlined process ensures comfort and precision at every stage:
+            </p>
+          </div>
 
-  <div className="timeline-step" data-aos="fade-right">
-    <div className="timeline-icon">📋</div>
-    <div className="timeline-content">
-      <h3>Consultation & Diagnosis</h3>
-      <p>Our specialists conduct a thorough clinical examination and utilize digital X-rays and 3D imaging (if necessary) to assess your oral health and determine the best course of action.</p>
-    </div>
-    <div className="timeline-icon">1</div>
-  </div>
+          <div className="timeline-step" data-aos="fade-right">
+            <div className="timeline-icon">📋</div>
+            <div className="timeline-content">
+              <h3>Consultation & Diagnosis</h3>
+              <p>Our specialists conduct a thorough clinical examination and utilize digital X-rays and 3D imaging (if necessary) to assess your oral health and determine the best course of action.</p>
+            </div>
+            <div className="timeline-icon">1</div>
+          </div>
 
-  <div className="timeline-step" data-aos="fade-left">
-    <div className="timeline-icon">🦷</div>
-    <div className="timeline-content">
-      <h3>Tooth Preparation</h3>
-      <p>Teeth are shaped to allow proper crown or bridge fitting. This involves removing a small amount of enamel to avoid bulkiness and ensure a natural look.</p>
-    </div>
-    <div className="timeline-icon">2</div>
-  </div>
+          <div className="timeline-step" data-aos="fade-left">
+            <div className="timeline-icon">🦷</div>
+            <div className="timeline-content">
+              <h3>Tooth Preparation</h3>
+              <p>Teeth are shaped to allow proper crown or bridge fitting. This involves removing a small amount of enamel to avoid bulkiness and ensure a natural look.</p>
+            </div>
+            <div className="timeline-icon">2</div>
+          </div>
 
-  <div className="timeline-step" data-aos="fade-right">
-    <div className="timeline-icon">📸</div>
-    <div className="timeline-content">
-      <h3>Digital Impressions</h3>
-      <p>We use advanced 3D scanning to capture precise models of your teeth, eliminating the need for uncomfortable molds and ensuring excellent bite alignment.</p>
-    </div>
-    <div className="timeline-icon">3</div>
-  </div>
+          <div className="timeline-step" data-aos="fade-right">
+            <div className="timeline-icon">📸</div>
+            <div className="timeline-content">
+              <h3>Digital Impressions</h3>
+              <p>We use advanced 3D scanning to capture precise models of your teeth, eliminating the need for uncomfortable molds and ensuring excellent bite alignment.</p>
+            </div>
+            <div className="timeline-icon">3</div>
+          </div>
 
-  <div className="timeline-step" data-aos="fade-left">
-    <div className="timeline-icon">🛠️</div>
-    <div className="timeline-content">
-      <h3>Temporary Crown/Bridge</h3>
-      <p>A temporary restoration is placed to protect your prepared teeth while the custom crown/bridge is being made in the lab.</p>
-    </div>
-    <div className="timeline-icon">4</div>
-  </div>
+          <div className="timeline-step" data-aos="fade-left">
+            <div className="timeline-icon">🛠️</div>
+            <div className="timeline-content">
+              <h3>Temporary Crown/Bridge</h3>
+              <p>A temporary restoration is placed to protect your prepared teeth while the custom crown/bridge is being made in the lab.</p>
+            </div>
+            <div className="timeline-icon">4</div>
+          </div>
 
-  <div className="timeline-step" data-aos="fade-right">
-    <div className="timeline-icon">😁</div>
-    <div className="timeline-content">
-      <h3>Final Crown/Bridge Placement</h3>
-      <p>Once your crown/bridge is ready, we securely cement it in place, ensuring a proper fit, appearance, and function.</p>
-    </div>
-    <div className="timeline-icon">5</div>
-  </div>
+          <div className="timeline-step" data-aos="fade-right">
+            <div className="timeline-icon">😁</div>
+            <div className="timeline-content">
+              <h3>Final Crown/Bridge Placement</h3>
+              <p>Once your crown/bridge is ready, we securely cement it in place, ensuring a proper fit, appearance, and function.</p>
+            </div>
+            <div className="timeline-icon">5</div>
+          </div>
 
-  <div className="timeline-step" data-aos="fade-left">
-    <div className="timeline-icon">✅</div>
-    <div className="timeline-content">
-      <h3>Follow-Up Adjustments</h3>
-      <p>We may make minor refinements to ensure long-term comfort, function, and aesthetics. Follow-ups are encouraged for continued success.</p>
-    </div>
-    <div className="timeline-icon">6</div>
-  </div>
-</section>
+          <div className="timeline-step" data-aos="fade-left">
+            <div className="timeline-icon">✅</div>
+            <div className="timeline-content">
+              <h3>Follow-Up Adjustments</h3>
+              <p>We may make minor refinements to ensure long-term comfort, function, and aesthetics. Follow-ups are encouraged for continued success.</p>
+            </div>
+            <div className="timeline-icon">6</div>
+          </div>
+        </section>
 
 
         <section className="advantages-section">
           <div className="content" data-aos="fade-up">
-            <SectionTitle title="Key Advantages of Crowns and Bridges
-" />
+            <SectionTitle title="Key Advantages of Crowns and Bridges" />
 
             <p1 className="text_first">
               The benefits of investing in dental crowns and bridges extend beyond just a
@@ -642,7 +641,7 @@ Crowns and Bridges Treatment" />
         </section>
 
 
-        <section className="cta-section">
+        <section className="cta-section" data-aos='zoom-in'>
           <div className="cta-content">
             <h2>
               Schedule Your Appointment <span>Today!</span>
@@ -650,17 +649,14 @@ Crowns and Bridges Treatment" />
             <p>
               Discover the best crowns and bridges treatment at Kosmix with cutting-edge technology and top-rated care.
             </p>
-           <div className="cta-buttons">
-  <Link to="/#appointment" >
-  <button className="btn-primary">Book Appointment</button>
-    
-  </Link>
-</div>
+            <div className="cta-buttons">
+              <Link to="/#appointment" >
+                <button className="btn-primary">Book Appointment</button>
+
+              </Link>
+            </div>
           </div>
         </section>
-
-
-
       </div>
 
     </>
@@ -671,22 +667,7 @@ const SectionTitle = ({ title }) => (
   <h2 className="section-title">{title}</h2>
 );
 
-const ListTitle = ({ title }) => <p className="list-title">{title}</p>;
 
-const BulletList = ({ items }) => (
-  <ul className="bullet-list">
-    {items.map((item, i) => (
-      <li key={i}>{item}</li>
-    ))}
-  </ul>
-);
 
-const OrderedList = ({ items }) => (
-  <ol className="ordered-list">
-    {items.map((item, i) => (
-      <li key={i}>{item}</li>
-    ))}
-  </ol>
-);
 
 export default CrownAndBridges;

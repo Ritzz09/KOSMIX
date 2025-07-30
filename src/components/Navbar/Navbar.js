@@ -53,25 +53,43 @@ const Navbar = () => {
                     SERVICES
                   </span>
                   <ul className="dropdown-menu">
-                    {/* <li>
-<Link className="dropdown-item" to="/services/dental-implants" onClick={handleNavLinkClick}>
+                 
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/services/dental-crowns-and-bridges-in-hsr"
+                        onClick={handleNavLinkClick}
+                      >
+                        Crown And Bridges
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/services/dental-implants-in-hsr"
+                        onClick={handleNavLinkClick}
+                      >
                         Dental Implants
                       </Link>
-                    </li> */}
-                    <li>
-                   <Link
-  className="dropdown-item"
-  to="/services/dental-crowns-and-bridges-in-hsr"
-  onClick={handleNavLinkClick}
->
-  Crown And Bridges
-</Link>
                     </li>
-                    {/* <li>
-                      <Link className="dropdown-item" to="/services/teeth-whitening" onClick={handleNavLinkClick}>
-                        Teeth Whitening
+                  <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/services/braces-and-aligners-in-hsr"
+                        onClick={handleNavLinkClick}
+                      >
+                        Braces And Aligners
                       </Link>
-                    </li> */}
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/services/teeth-cleaning-in-hsr"
+                        onClick={handleNavLinkClick}
+                      >
+                        Teeth Cleaning
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 

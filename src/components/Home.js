@@ -19,8 +19,10 @@ import { useEffect } from "react";
 // Import new service pages
 
 import CrownAndBridges from "../Pages/Services/dental-crowns-and-bridges-in-hsr";
-// import RootCanal from "./ServicesPages/RootCanal";
-// import TeethWhitening from "./ServicesPages/TeethWhitening";
+import DentalImplants from "../Pages/Services/dental-implants-in-hsr";
+import BracesAndAligners from "../Pages/Services/braces-and-aligners-in-hsr";
+import TeethCleaning from "../Pages/Services/teeth-cleaning-in-hsr";
+
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -79,22 +81,31 @@ const Home = () => {
           </Layout>
         }
       />
-      {/* <Route
-        path="/services/root-canal"
+      <Route
+        path="/services/dental-implants-in-hsr"
         element={
           <Layout>
-            <RootCanal />
+            <DentalImplants />
           </Layout>
         }
       />
-      <Route
-        path="/services/teeth-whitening"
+       <Route
+        path="/services/braces-and-aligners-in-hsr"
         element={
           <Layout>
-            <TeethWhitening />
+            <BracesAndAligners />
           </Layout>
         }
-      /> */}
+      />
+       <Route
+        path="/services/teeth-cleaning-in-hsr"
+        element={
+          <Layout>
+            <TeethCleaning />
+          </Layout>
+        }
+      />
+      
     </Routes>
   );
 };
