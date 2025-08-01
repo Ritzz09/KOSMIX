@@ -13,52 +13,57 @@ import { useEffect } from 'react';
 
 const CrownAndBridges = () => {
 
-  useEffect(() => {
-    // 1. Title
+ useEffect(() => {
+    // 1. Remove all default meta, script[type="application/ld+json"], and canonical tags
+    const tagsToRemove = [...document.querySelectorAll('meta, script[type="application/ld+json"], link[rel="canonical"]')];
+    const originalTags = [];
+
+    tagsToRemove.forEach((tag) => {
+      // Only remove tags that were not dynamically inserted
+      if (
+        tag.getAttribute("data-react-controlled") !== "true" &&
+        !tag.outerHTML.includes("gtm.js") // Keep GTM
+      ) {
+        originalTags.push(tag);
+        tag.remove();
+      }
+    });
+
+    // 2. Add custom SEO tags
     document.title = "Dental Crowns and Bridges Treatment in HSR Layout";
 
-    // 2. Canonical tag
-    const canonical = document.createElement("link");
-    canonical.setAttribute("rel", "canonical");
-    canonical.setAttribute(
-      "href",
-      "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"
-    );
-    document.head.appendChild(canonical);
+    const createMetaTag = (attrName, attrValue, content) => {
+      const tag = document.createElement("meta");
+      tag.setAttribute(attrName, attrValue);
+      tag.setAttribute("content", content);
+      tag.setAttribute("data-react-controlled", "true"); // So we can identify this later
+      document.head.appendChild(tag);
+      return tag;
+    };
 
-    // 3. Open Graph meta tags
-    const ogTags = [
+    const metaTags = [
+      ["name", "description", "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile."],
       ["property", "og:title", "Dental Crowns and Bridges Treatment in HSR Layout"],
       ["property", "og:description", "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile."],
       ["property", "og:type", "article"],
       ["property", "og:url", "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"],
       ["property", "og:image", "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg"],
-      ["property", "og:site_name", "Kosmix Dental Clinic"],
-      ["property", "og:locale", "en_US"]
-    ];
-
-    // 4. Twitter meta tags
-    const twitterTags = [
       ["name", "twitter:card", "summary_large_image"],
       ["name", "twitter:title", "Dental Crowns and Bridges Treatment in HSR Layout"],
       ["name", "twitter:description", "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile."],
       ["name", "twitter:image", "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg"],
-      ["name", "twitter:site", "@kosmixhsr"],
-      ["name", "twitter:url", "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"]
-    ];
+      ["name", "twitter:site", "@kosmixhsr"]
+    ].map(([attr, name, content]) => createMetaTag(attr, name, content));
 
-    const metaTags = [...ogTags, ...twitterTags].map(([attr, name, content]) => {
-      const tag = document.createElement("meta");
-      tag.setAttribute(attr, name);
-      tag.setAttribute("content", content);
-      document.head.appendChild(tag);
-      return tag;
-    });
+    const canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    canonical.setAttribute("href", "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr");
+    canonical.setAttribute("data-react-controlled", "true");
+    document.head.appendChild(canonical);
 
-    // 5. JSON-LD Schema script
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify({
+    const jsonLdScript = document.createElement("script");
+    jsonLdScript.type = "application/ld+json";
+    jsonLdScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
       "mainEntityOfPage": {
@@ -83,16 +88,15 @@ const CrownAndBridges = () => {
       },
       "datePublished": "2025-08-01"
     });
-    document.head.appendChild(script);
+    jsonLdScript.setAttribute("data-react-controlled", "true");
+    document.head.appendChild(jsonLdScript);
 
-    // 🧼 Clean up on unmount to avoid duplication
+    // 🧼 Cleanup: Remove injected tags and restore original tags when navigating away
     return () => {
-      document.head.removeChild(canonical);
-      metaTags.forEach(tag => document.head.removeChild(tag));
-      document.head.removeChild(script);
+      document.querySelectorAll('[data-react-controlled="true"]').forEach((tag) => tag.remove());
+      originalTags.forEach((tag) => document.head.appendChild(tag)); // Restore removed tags
     };
   }, []);
-
 
   const types = [
     {
