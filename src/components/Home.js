@@ -1,43 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+
+// Layout
 import Navbar from "./Navbar/Navbar";
-import Appointment from "./Appointment/Appointment";
-import Associates from "./associate_dentist/associates";
-import Banner from "./Banner/Banner";
-import USP from "./Usp/usp";
 import Footer from "./Footer/Footer";
-import Services from "./Services/Services";
-import Testimonial from "./Testimonial/Testimonial";
-import Gallery from "./Gallery/Gallery";
-import Scroll from "./scroll/scroll";
-import Clinic from "./Clinic/Clinic";
-import Dentist from "./Dentist/Dentist";
-import Equipments from "./Equipment/Equipment";
+
+// Pages
+import Homepage from "./homepage"; // ✅ new component for home
 import ThankYou from "./thankyou";
-import { useEffect } from "react";  
 
-// Import new service pages
-
+// Services
 import CrownAndBridges from "../Pages/Services/dental-crowns-and-bridges-in-hsr";
 import DentalImplants from "../Pages/Services/dental-implants-in-hsr";
 import BracesAndAligners from "../Pages/Services/braces-and-aligners-in-hsr";
 import TeethCleaning from "../Pages/Services/teeth-cleaning-in-hsr";
 
-
 const Layout = ({ children }) => {
   const location = useLocation();
-   useEffect(() => {
+
+  useEffect(() => {
     const hash = location.hash;
     if (hash) {
-      // Wait for DOM to be ready
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 0); // delay to ensure layout is mounted
+      }, 0);
     }
   }, [location]);
+
   return location.pathname !== "/thankyou" ? (
     <>
       <Navbar />
@@ -52,28 +44,21 @@ const Layout = ({ children }) => {
 const Home = () => {
   return (
     <Routes>
+      {/* ✅ Refactored Homepage */}
       <Route
         path="/"
         element={
           <Layout>
-            <Banner />
-            <USP />
-            <Clinic />
-            <Services />
-            <Dentist />
-            <Associates />
-            <Gallery />
-            <Equipments />
-            <Testimonial />
-            <Appointment />
-            <Scroll />
+            <Homepage />
           </Layout>
         }
       />
+
+      {/* Thank You */}
       <Route path="/thankyou" element={<ThankYou />} />
 
-      {/* Service Pages Routes */}
-       <Route
+      {/* Service Pages */}
+      <Route
         path="/services/dental-crowns-and-bridges-in-hsr"
         element={
           <Layout>
@@ -89,7 +74,7 @@ const Home = () => {
           </Layout>
         }
       />
-       <Route
+      <Route
         path="/services/braces-and-aligners-in-hsr"
         element={
           <Layout>
@@ -97,7 +82,7 @@ const Home = () => {
           </Layout>
         }
       />
-       <Route
+      <Route
         path="/services/teeth-cleaning-in-hsr"
         element={
           <Layout>
@@ -105,7 +90,6 @@ const Home = () => {
           </Layout>
         }
       />
-      
     </Routes>
   );
 };

@@ -6,64 +6,80 @@ import dentalImage from "./services/dental.png";
 import { FaCheckCircle } from 'react-icons/fa';
 import { MdOutlineStarPurple500, MdOutlineHealthAndSafety } from "react-icons/md";
 import { GiGoldBar } from "react-icons/gi";
-import { FaTooth, FaRegSmileBeam } from "react-icons/fa";
+import { FaTooth } from "react-icons/fa";
 import { FaMicroscope, FaSmile, FaThumbsUp, FaStar } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 const CrownAndBridges = () => {
 
- useEffect(() => {
-    // 1. Remove all default meta, script[type="application/ld+json"], and canonical tags
-    const tagsToRemove = [...document.querySelectorAll('meta, script[type="application/ld+json"], link[rel="canonical"]')];
-    const originalTags = [];
-
-    tagsToRemove.forEach((tag) => {
-      // Only remove tags that were not dynamically inserted
-      if (
-        tag.getAttribute("data-react-controlled") !== "true" &&
-        !tag.outerHTML.includes("gtm.js") // Keep GTM
-      ) {
-        originalTags.push(tag);
-        tag.remove();
-      }
-    });
-
-    // 2. Add custom SEO tags
+  useEffect(() => {
+    // Title
     document.title = "Dental Crowns and Bridges Treatment in HSR Layout";
 
-    const createMetaTag = (attrName, attrValue, content) => {
-      const tag = document.createElement("meta");
-      tag.setAttribute(attrName, attrValue);
-      tag.setAttribute("content", content);
-      tag.setAttribute("data-react-controlled", "true"); // So we can identify this later
-      document.head.appendChild(tag);
-      return tag;
-    };
+    // Description
+    const description = "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile.";
+    let metaDesc = document.querySelector("meta[name='description']");
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.name = "description";
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = description;
 
-    const metaTags = [
-      ["name", "description", "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile."],
-      ["property", "og:title", "Dental Crowns and Bridges Treatment in HSR Layout"],
-      ["property", "og:description", "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile."],
-      ["property", "og:type", "article"],
-      ["property", "og:url", "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"],
-      ["property", "og:image", "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg"],
-      ["name", "twitter:card", "summary_large_image"],
-      ["name", "twitter:title", "Dental Crowns and Bridges Treatment in HSR Layout"],
-      ["name", "twitter:description", "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile."],
-      ["name", "twitter:image", "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg"],
-      ["name", "twitter:site", "@kosmixhsr"]
-    ].map(([attr, name, content]) => createMetaTag(attr, name, content));
+    // Canonical
+    let link = document.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr";
 
-    const canonical = document.createElement("link");
-    canonical.setAttribute("rel", "canonical");
-    canonical.setAttribute("href", "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr");
-    canonical.setAttribute("data-react-controlled", "true");
-    document.head.appendChild(canonical);
+    // OG Tags
+    const ogTags = [
+      { property: "og:title", content: "Dental Crowns and Bridges Treatment in HSR Layout" },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "article" },
+      { property: "og:url", content: "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr" },
+      { property: "og:image", content: "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg" },
+      { property: "og:site_name", content: "Kosmix Dental Clinic" },
+      { property: "og:locale", content: "en_US" }
+    ];
 
-    const jsonLdScript = document.createElement("script");
-    jsonLdScript.type = "application/ld+json";
-    jsonLdScript.textContent = JSON.stringify({
+    ogTags.forEach(tag => {
+      let el = document.querySelector(`meta[property='${tag.property}']`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute("property", tag.property);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", tag.content);
+    });
+
+    // Twitter Tags
+    const twitterTags = [
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Dental Crowns and Bridges Treatment in HSR Layout" },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg" },
+      { name: "twitter:site", content: "@kosmixhsr" },
+      { name: "twitter:url", content: "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr" }
+    ];
+
+    twitterTags.forEach(tag => {
+      let el = document.querySelector(`meta[name='${tag.name}']`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute("name", tag.name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", tag.content);
+    });
+
+    // JSON-LD Structured Data
+    const ldJson = {
       "@context": "https://schema.org",
       "@type": "Article",
       "mainEntityOfPage": {
@@ -71,7 +87,7 @@ const CrownAndBridges = () => {
         "@id": "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"
       },
       "headline": "Dental Crowns and Bridges Treatment in HSR Layout",
-      "description": "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile.",
+      "description": description,
       "image": "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg",
       "author": {
         "@type": "Organization",
@@ -87,16 +103,19 @@ const CrownAndBridges = () => {
         }
       },
       "datePublished": "2025-08-01"
-    });
-    jsonLdScript.setAttribute("data-react-controlled", "true");
-    document.head.appendChild(jsonLdScript);
-
-    // 🧼 Cleanup: Remove injected tags and restore original tags when navigating away
-    return () => {
-      document.querySelectorAll('[data-react-controlled="true"]').forEach((tag) => tag.remove());
-      originalTags.forEach((tag) => document.head.appendChild(tag)); // Restore removed tags
     };
+
+    const existingJsonLd = document.querySelector("script[type='application/ld+json']");
+    if (existingJsonLd) {
+      existingJsonLd.remove();
+    }
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(ldJson);
+    document.head.appendChild(script);
   }, []);
+
 
   const types = [
     {
@@ -258,8 +277,24 @@ const CrownAndBridges = () => {
 
   return (
     <>
-      
+    
       <div className="service1-section">
+        
+
+        <Helmet>
+          <title>Dental Crowns and Bridges Treatment in HSR Layout | Kosmix</title>
+          <meta
+            name="description"
+            content="Looking for durable and aesthetic dental crowns and bridges treatment in HSR Layout? Get expert care from our crown and bridge specialists today!"
+          />
+          <link
+            rel="canonical"
+            href="https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"
+          />
+          
+        </Helmet>
+        
+
         <div className="hero">
           <h1 className="service1-title-text" data-aos="fade-down" data-aos-delay="200" style={{ fontFamily: 'initial' }}>
             Dental Crowns and Bridges Treatment in HSR Layout
