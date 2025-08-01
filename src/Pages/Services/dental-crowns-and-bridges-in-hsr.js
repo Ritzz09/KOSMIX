@@ -173,8 +173,10 @@ const CrownAndBridges = () => {
 
   return (
     <>
-
+      
       <div className="service1-section">
+        
+
         <Helmet>
           <title>Dental Crowns and Bridges Treatment in HSR Layout | Kosmix</title>
           <meta
@@ -185,7 +187,56 @@ const CrownAndBridges = () => {
             rel="canonical"
             href="https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr"
           />
+
+           <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr",
+      },
+      "headline": "Dental Crowns and Bridges Treatment in HSR Layout",
+      "description":
+        "Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile.",
+      "image":
+        "https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg",
+      "author": {
+        "@type": "Organization",
+        "name": "admin",
+        "url": "https://www.kosmixdentalclinic.com/",
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kosmix dental clinic",
+        "logo": {
+          "@type": "ImageObject",
+          "url":
+            "https://www.kosmixdentalclinic.com/static/media/logo.caf2f0f713054eeb8db8.png",
+        },
+      },
+      "datePublished": "2025-08-01",
+    })}
+  </script>
+
+  <meta property="og:title" content="Dental Crowns and Bridges Treatment in HSR Layout"/>
+<meta property="og:description" content="Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr" />
+<meta property="og:image" content="https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg" />
+<meta property="og:site_name" content="Kosmix Dental Clinic" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dental Crowns and Bridges Treatment in HSR Layout"/>
+<meta name="twitter:description" content="Kosmix Dental Clinic in HSR, led by MDS specialists Dr. Shankhadeep and Dr. Sophia, offers advanced and patient-friendly dental care tailored to your smile." />
+<meta name="twitter:image" content="https://www.kosmixdentalclinic.com/static/media/crowns&bridges.9a343d9b8df35789d090.jpeg" />
+<meta name="twitter:site" content="@kosmixhsr" />
+<meta name="twitter:url" content="https://www.kosmixdentalclinic.com/services/dental-crowns-and-bridges-in-hsr" />
+
+          
         </Helmet>
+        
 
         <div className="hero">
           <h1 className="service1-title-text" data-aos="fade-down" data-aos-delay="200" style={{ fontFamily: 'initial' }}>
