@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import call from "../../assets/footer/calling.png";
 import time from "../../assets/footer/time.png";
 import location from "../../assets/footer/location.png";
+import clinicspot from "../../assets/clinicspot.png";
 
 const Footer = () => {
   const footerMenu = [
@@ -14,7 +15,7 @@ const Footer = () => {
     { name: "Dentist", link: "#dentist" },
     { name: "Team", link: "#associates" },
     { name: "Gallery", link: "#gallery" },
-    
+
     // { name: "Equipments", link: "#equipments" },
     { name: "Testimonials", link: "#testimonials" },
     { name: "Contact", link: "#contact" },
@@ -75,13 +76,25 @@ const Footer = () => {
                 <a target="_blanked" href="https://www.pinterest.com/kosmixhsr/">
                   <FaPinterest />
                 </a>
+                <a
+                  href="https://www.clinicspots.com/dentist/bangalore/hsr-layout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Kosmix Dental Clinic on Pinterest"
+                >
+                  <img
+                    src={clinicspot}         // replace with your image path or URL
+                    alt="Pinterest"
+                    style={{ width: 20, height: 24 }}    // set your desired size
+                  />
+                </a>
               </div>
             </div>
           </div>
 
           <div className="footer-section">
             <div className="section-title1">
-              <p style={{marginBottom:'20px'}}>Quick Links</p>
+              <p style={{ marginBottom: '20px' }}>Quick Links</p>
             </div>
             <ul className="footer-links">
               {footerMenu.map((singleMenu, index) => (
@@ -115,12 +128,12 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-        <p>
-  &copy; 2025 Kosmix Dental Clinic. Design by{" "}
-  <a target="_blanked" href="https://mastermindweb.in/" rel="noopener noreferrer">
-    MasterMind Web Developers
-  </a>
-</p> 
+          <p>
+            &copy; 2025 Kosmix Dental Clinic. Design by{" "}
+            <a target="_blanked" href="https://mastermindweb.in/" rel="noopener noreferrer">
+              MasterMind Web Developers
+            </a>
+          </p>
         </div>
       </div>
     </footer>
